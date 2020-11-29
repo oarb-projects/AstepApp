@@ -9,14 +9,22 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+import { Contacts} from '@ionic-native/contacts/ngx';
+import { CallNumber } from '@ionic-native/call-number/ngx';
+import { SharedModule } from './shared/shared.module';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, SharedModule],
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    Contacts,
+    CallNumber,
+    InAppBrowser
   ],
   bootstrap: [AppComponent]
 })
