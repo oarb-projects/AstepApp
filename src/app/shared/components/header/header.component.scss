@@ -1,0 +1,7 @@
+:host {
+  --ion-toolbar-background: #cc99ff;
+}
+ion-back-button,
+ion-title {
+  color: var(--ion-color-primary-contrast);
+}

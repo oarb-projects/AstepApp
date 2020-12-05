@@ -1,24 +1,71 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="primary">
-    <ion-title> A-step </ion-title>
+    <ion-title class="ion-text-center"> A-step </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
-  <ion-header collapse="condense">
+  <!-- <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Blank</ion-title>
     </ion-toolbar>
-  </ion-header>
-  <ion-button [routerLink]="['/recipes']">Recetario</ion-button>
-  <ion-button [routerLink]="['/phonebook']">Directorio</ion-button>
-  <ion-button [routerLink]="['/notes']">Registro</ion-button>
-  <ion-button color="primary" (click)="callMe()">Call me</ion-button>
-  <ion-button
-    color="primary"
-    (click)="openFb('https://www.facebook.com/oscar.rosetebeas')"
-    >Pagina</ion-button
-  >
+  </ion-header> -->
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button [routerLink]="['/notes']" fill="clear">
+          <ion-row class="ion-justify-content-center">
+            <ion-icon src="/assets/img/icons/guests-book.svg"></ion-icon>
+            <p>Registro</p>
+          </ion-row>
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button [routerLink]="['/recipes']" fill="clear">
+          <ion-row class="ion-justify-content-center">
+            <ion-icon src="/assets/img/icons/medicine.svg"></ion-icon>
+            <p>Recetario</p>
+          </ion-row>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="6">
+        <ion-button color="primary" (click)="callMe()" fill="clear">
+          <ion-row class="ion-justify-content-center">
+            <ion-icon src="/assets/img/icons/phone-call.svg"></ion-icon>
+            <p>Llamada S.O.S</p>
+          </ion-row>
+          <!-- Call me -->
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button
+          color="primary"
+          (click)="openFb('https://www.facebook.com/oscar.rosetebeas')"
+          fill="clear"
+        >
+          <ion-row class="ion-justify-content-center">
+            <ion-icon src="/assets/img/icons/logo.svg"></ion-icon>
+            <p>Pagina</p>
+          </ion-row>
+        </ion-button>
+      </ion-col>
+
+      <ion-col>
+        <ion-button [routerLink]="['/phonebook']" fill="clear">
+          <ion-row class="ion-justify-content-center">
+            <ion-icon src="/assets/img/icons/phone-book.svg"></ion-icon>
+            <p>Directorio</p>
+          </ion-row>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
   <!-- <div id="container">
     <strong>Ready to create an app?</strong>

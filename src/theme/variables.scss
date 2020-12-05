@@ -4,14 +4,16 @@
 /** Ionic CSS Variables **/
 :root {
   /* Set the background of the entire app */
-  --ion-background-color: #cc99ff;
+  // --ion-background-color: #cc99ff;
+  --ion-background-color: #f1e2ff;
 
   /* Set the font family of the entire app */
   --ion-font-family: “Roboto”, -apple-system, BlinkMacSystemFont,
     "Helvetica Neue", "Roboto", sans-serif;
 
   /** primary **/
-  --ion-color-primary: #3880ff;
+  // --ion-color-primary: #3880ff;
+  --ion-color-primary: #cc99ff;
   --ion-color-primary-rgb: 56, 128, 255;
   --ion-color-primary-contrast: #ffffff;
   --ion-color-primary-contrast-rgb: 255, 255, 255;
