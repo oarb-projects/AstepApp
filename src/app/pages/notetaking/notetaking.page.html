@@ -2,4 +2,18 @@
   <app-header title="Registro"></app-header>
 </ion-header>
 
-<ion-content> </ion-content>
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item *ngFor="let user of usuarios | async">
+      <ion-label>
+        <h3>{{user.name}}</h3>
+        <p>{{user.email}}</p>
+      </ion-label>
+      <ion-label slot="end" class="ion-text-end text-small"
+        >{{user.phone}}</ion-label
+      >
+    </ion-item>
+  </ion-list>
+
+  <ion-button (click)="presentPopover()" expand="block"> Click me </ion-button>
+</ion-content>
