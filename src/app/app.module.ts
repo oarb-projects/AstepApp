@@ -16,9 +16,12 @@ import { SharedModule } from './shared/shared.module';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 import { FormsModule } from '@angular/forms';
 import { NotetakingPopoverComponent } from './components/notetaking-popover/notetaking-popover.component';
+import { RecipePopoverComponent } from './components/recipe-popover/recipe-popover.component';
+import { PhonebookPopoverComponent } from './components/phonebook-popover/phonebook-popover.component';
+
 
 @NgModule({
-  declarations: [AppComponent, NotetakingPopoverComponent],
+  declarations: [AppComponent, NotetakingPopoverComponent, PhonebookPopoverComponent,RecipePopoverComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, SharedModule, FormsModule, HttpClientModule],
   providers: [

@@ -3,8 +3,37 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
-  <ion-button (click)="loadContacts()" expand="full">
+  <!-- <ion-button (click)="loadContacts()" expand="full">
     Agregar Contactos
+  </ion-button> -->
+  <ion-list>
+    <!-- <ion-item *ngFor="let user of usuarios | async"> -->
+    <ion-item *ngFor="let user of usuarios" class="item-background-color">
+      <ion-col size="4">
+        <img
+          class="circle-pic"
+          [src]="user?.img!= null ? user.img : myImgUrl"
+        />
+      </ion-col>
+      <ion-col size="6">
+        <ion-label text-wrap>
+          <h3>{{user.nombre}}</h3>
+          <p>{{user.celular}}</p>
+        </ion-label>
+      </ion-col>
+      <ion-col size="2">
+        <ion-label>
+          <ion-icon slot="icon-only" name="call"></ion-icon>
+        </ion-label>
+      </ion-col>
+      <!-- <ion-label slot="end" class="ion-text-end text-small"
+            >{{user.phone}}</ion-label
+          > -->
+    </ion-item>
+  </ion-list>
+
+  <ion-button (click)="presentPopover()" expand="block">
+    Agregar Registro
   </ion-button>
 
   <ion-list>

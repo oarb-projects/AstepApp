@@ -1,3 +1,16 @@
 .text-small {
   font-size: 12px;
 }
+// ion-card,
+// ion-item,
+// ion-label {
+//   background-color: #000; // black
+// }
+ion-card,
+.item-background-color {
+  --ion-item-background: #c4c4c4;
+}
+// ion-card-content,
+.item-background-color {
+  border: none;
+}

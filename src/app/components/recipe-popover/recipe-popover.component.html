@@ -20,11 +20,11 @@
     </ion-list-header>
 
     <ion-item>
-      <ion-label position="floating">Sesion:</ion-label>
+      <ion-label position="floating">Nombre Medicamento:</ion-label>
       <ion-input
         type="text"
-        name="session"
-        [(ngModel)]="userInfo.session"
+        name="nombre"
+        [(ngModel)]="recipeInfo.nombre"
         required
       ></ion-input>
     </ion-item>
@@ -34,18 +34,18 @@
       <ion-datetime
         display-format="DD.MM.YYYY"
         name="fecha"
-        [(ngModel)]="userInfo.fecha"
+        [(ngModel)]="recipeInfo.fecha"
       ></ion-datetime>
     </ion-item>
 
-    <ion-item>
+    <!-- <ion-item>
       <ion-label position="floating">Notas</ion-label>
       <ion-input
         type="text"
         name="notes"
         [(ngModel)]="userInfo.notas"
       ></ion-input>
-    </ion-item>
+    </ion-item> -->
 
     <ion-button [disabled]="formulario.invalid" type="submit" expand="block">
       Agregar
